@@ -1,0 +1,6 @@
+神经网络
+a1 = [ones(m, 1) X]', if X is given in rows, then add one column and transpose it; exactly the same for transpose first then add one row.
+这时输入就符合我们的要求了，然后对于每一个layer，a(i)都只要在最上面加一行即可。
+反向传播算法，计算delta(l)，我们不计算bias的误差
+delta(l) = (theta(l)' * delta(l+1)) .* g'(z(l))
+这里的theta(l)矩阵要去掉第一列[1 1 1 ...]'。
